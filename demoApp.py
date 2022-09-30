@@ -40,7 +40,7 @@ async def command(
   arg: int
 ): #this bit needs later stress testing and conditionals
     module = globals()[moduleToCall]
-    function = module.__getattribute__(arg)
+    function = module.__getattribute__(moduleToCall)
     output = function(arg)
     return {
       "command": output
