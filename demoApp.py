@@ -38,7 +38,7 @@ importlib.invalidate_caches()
 async def command(
   moduleToCall: str, 
   arg: int
-):
+): #this bit needs later stress testing and conditionals
     module = globals()[moduleToCall]
     function = module.__getattribute__(arg)
     output = function(arg)
